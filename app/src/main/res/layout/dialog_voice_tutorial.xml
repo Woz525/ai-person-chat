@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义音色教程"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="首先打开安装好的CloneTTS\n点击右上角三个点添加音色"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- 图片 ys1 -->
+            <ImageView
+                android:id="@+id/iv_ys1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ys1"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="根据情况，如果有音频选第一个'外部选取'，直接录制选第二个'录音室采音'"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <ImageView
+                android:id="@+id/iv_ys2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ys2"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="音色名称最好和代号一样，且都为英文\n发音参考文本填入刚才录制/音频中朗读的文字\n算力精度根据要求填\n音频预处理也是看要求填"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <ImageView
+                android:id="@+id/iv_ys3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ys3"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="点击保存并启用\n点击主页左上角三横杠"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <ImageView
+                android:id="@+id/iv_ys4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ys4"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="选择'本地HTTP API服务'\n勾选'本地HTTP API服务'"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <ImageView
+                android:id="@+id/iv_ys5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ys5"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="还可以进行选择模型"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <ImageView
+                android:id="@+id/iv_ys6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ys6"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="可以选高速模型"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <ImageView
+                android:id="@+id/iv_ys7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ys7"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="接下来是后台保护"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- 关闭电池优化按钮 -->
+            <Button
+                android:id="@+id/btnBatteryOptimization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关闭电池优化"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="到此，在AIPC中查找你的音色名称即可，记得把CloneTTS挂在后台"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnCloseTutorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关闭"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

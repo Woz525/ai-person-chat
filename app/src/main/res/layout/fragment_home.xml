@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- 原有内容容器 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ========== 顶部工具栏（始终显示） ========== -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/homeToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary_color"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <ImageView
+                android:id="@+id/ivCircle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="start"
+                android:src="@drawable/ic_circle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/primary_color"
+                android:text="切换"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:cornerRadius="18dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:padding="12dp"
+                android:src="@drawable/menu_icon"
+                android:scaleType="centerInside" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- ========== 角色卡片（可单独隐藏/显示） ========== -->
+        <LinearLayout
+            android:id="@+id/llRoleCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#1A1A1A"
+            android:visibility="visible">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="2dp">
+                <ImageView
+                    android:id="@+id/ivBotAvatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvBotName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="智能体"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- ========== 聊天列表 ========== -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvChatMessages"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:background="#000000" />
+
+        <!-- ========== 底部输入区 ========== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="#F5F5F5">
+
+            <ImageView
+                android:id="@+id/btnInventory"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/bag"
+                android:padding="8dp"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:id="@+id/etMessageInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="输入消息..."
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:maxLines="5"
+                android:inputType="textMultiLine"
+                android:imeOptions="actionSend"
+                android:background="@drawable/bg_input_rounded"
+                android:padding="12dp" />
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="发送"
+                android:backgroundTint="@color/primary_color"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ========== 静音按钮（浮动在左上角，位于 Toolbar 下方） ========== -->
+    <ImageButton
+        android:id="@+id/btnBgMusicToggle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/bgmoff"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="centerInside"
+        android:elevation="4dp" />
+</FrameLayout>

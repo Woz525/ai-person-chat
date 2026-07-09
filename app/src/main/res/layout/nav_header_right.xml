@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 语言 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="语言"
+            android:layout_marginBottom="8dp" />
+        <Spinner
+            android:id="@+id/spLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/language_options"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 用户名字 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名字"
+            android:layout_marginBottom="8dp" />
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入你的名字"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 性别 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别"
+            android:layout_marginBottom="8dp" />
+        <RadioGroup
+            android:id="@+id/rgUserGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <RadioButton
+                android:id="@+id/rbMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="男" />
+            <RadioButton
+                android:id="@+id/rbFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女" />
+            <RadioButton
+                android:id="@+id/rbSecret"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保密" />
+        </RadioGroup>
+
+        <!-- 模式 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="模式"
+            android:layout_marginBottom="8dp" />
+        <RadioGroup
+            android:id="@+id/rgMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+            <RadioButton
+                android:id="@+id/rbModePure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="纯净" />
+            <RadioButton
+                android:id="@+id/rbModeSlightlyYellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微黄" />
+            <RadioButton
+                android:id="@+id/rbModeYellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="黄" />
+            <RadioButton
+                android:id="@+id/rbModeBloody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="血腥" />
+            <RadioButton
+                android:id="@+id/rbModeFamily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="亲情" />
+        </RadioGroup>
+
+        <!-- 故事类型 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="故事类型"
+            android:layout_marginBottom="8dp" />
+        <RadioGroup
+            android:id="@+id/rgStoryType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <RadioButton
+                android:id="@+id/rbReal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="真实"
+                android:enabled="false" />
+            <RadioButton
+                android:id="@+id/rbArbitrary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="为所欲为" />
+        </RadioGroup>
+
+        <!-- UI样式 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UI样式"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rgUiMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <RadioButton
+                android:id="@+id/rbNoBackground"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="无背景"
+                android:checked="true" />
+            <RadioButton
+                android:id="@+id/rbWithBackground"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="有背景" />
+        </RadioGroup>
+
+        <!-- ★★★ 背景来源分组（默认隐藏，有背景时显示） ★★★ -->
+        <LinearLayout
+            android:id="@+id/llBackgroundSourceGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="背景来源"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/rgBackgroundSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <RadioButton
+                    android:id="@+id/rbBackgroundAI"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="AI生成"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rbBackgroundManual"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="直接提供" />
+            </RadioGroup>
+            <!-- ★★★ 重新生成按钮（AI生成模式下显示） ★★★ -->
+            <Button
+                android:id="@+id/btnRegenerateAI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="重新生成"
+                android:visibility="gone"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF" />
+
+            <!-- 上传按钮（默认隐藏，仅在直接提供时显示） -->
+            <Button
+                android:id="@+id/btnUploadBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="上传背景图片"
+                android:visibility="gone"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+        <!-- 背景音乐 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="背景音乐"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnImportBgMusic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="导入音频"
+            android:backgroundTint="#2196F3" />
+
+        <TextView
+            android:id="@+id/tvBgMusicName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(未导入)"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp" />
+        <!-- 编辑智能体按钮 -->
+        <Button
+            android:id="@+id/btnEditAgent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="编辑智能体"
+            android:backgroundTint="#4CAF50" />
+
+    </LinearLayout>
+</ScrollView>

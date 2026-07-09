@@ -1,0 +1,39 @@
+# Android
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+# Gradle
+.gradle/
+build/
+*/build/
+gradle/gradle-daemon-jvm.properties
+
+# Local
+local.properties
+/local.properties
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.kotlin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Keystore
+*.jks
+*.keystore
+
+# Other
+captures/
+.externalNativeBuild
+.cxx

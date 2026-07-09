@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#00A1D6" /> <!-- Bilibili 主题蓝 -->
+    <corners android:radius="8dp" />
+</shape>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splashLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="作者"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp" />
+
+    <!-- 圆形头像 + 圆形灰白边框（加粗） -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="60dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:strokeColor="#D3D3D3"
+        app:strokeWidth="4dp">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/woz"
+            android:scaleType="centerCrop" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvBilibili"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Bilibili:Woz_B"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvGithub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Github:https://github.com/..."
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+    <!-- 红色简短免责声明 -->
+    <TextView
+        android:id="@+id/tvDisclaimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="免责声明"
+        android:textColor="#FF0000"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvDisclaimerAll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*此软件如果使用自定义api可能会生成包括色情、血腥以及各种违规内容*"
+        android:textColor="#FF0000"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvDisclaimerAll2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*如果想使用需同意用户协议，AI生成的一切内容造成的后果与开发者无关*"
+        android:textColor="#FF0000"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+</LinearLayout>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 导入按钮 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnImport"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/primary_color"
+                android:text="导入"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="18dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+        </RelativeLayout>
+
+        <!-- 头像 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="头像"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvAvatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_default_avatar"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- 名字 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名字"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入名字"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 性别 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnMale"
+                style="@style/SexButtonStyle"
+                android:layout_width="80dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="16dp"
+                android:text="男"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnFemale"
+                style="@style/SexButtonStyle"
+                android:layout_width="80dp"
+                android:layout_height="36dp"
+                android:text="女"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- 性格 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性格"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etPersonality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入性格描述"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 背景故事 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="背景故事"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etBackstory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入背景故事"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 身份 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身份"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etIdentity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入身份"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 年龄 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="年龄"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入年龄"
+            android:inputType="number"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 爱好 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="爱好"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etHobby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入爱好"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 音色选择 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="音色"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:id="@+id/llVoiceSelector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageButton
+                android:id="@+id/btnVoice"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/voice"
+                android:scaleType="centerInside"
+                android:background="@drawable/bg_voice_button"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/tvVoiceStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(暂未选择)"
+                android:textSize="12sp"
+                android:textColor="#888888"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- ★ 新增：背景图描述 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="背景图描述"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etBackgroundPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入用于生成聊天背景的提示词（如：唯美风景，治愈系，柔和光影）"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="背景音乐"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+        <Button
+            android:id="@+id/btnImportBgMusic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="导入音频"
+            android:backgroundTint="#2196F3" />
+        <TextView
+            android:id="@+id/tvBgMusicName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(未导入)"
+            android:textColor="#888888"
+            android:textSize="12sp" />
+        <!-- 创建按钮 -->
+        <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#4CAF50"
+            android:text="创建"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="22dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

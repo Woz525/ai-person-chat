@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bg_dialog_rounded">
+
+    <!-- 标题（绿色） -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="遇到了什么问题？"
+        android:textSize="20sp"
+        android:textColor="#4CAF50"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 副标题（绿色） -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择去哪里反馈"
+        android:textColor="#4CAF50"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- 左右按钮容器 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!-- Bilibili 按钮（添加 minHeight 拉长背景） -->
+        <LinearLayout
+            android:id="@+id/btnBilibili"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="12dp"
+            android:minHeight="100dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/bg_button_bilibili"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_bilibili" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bilibili"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- QQ邮箱 按钮 -->
+        <LinearLayout
+            android:id="@+id/btnEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="12dp"
+            android:minHeight="100dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/bg_button_email"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_email" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QQ邮箱"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[不一定能看到]"
+                android:textColor="#CCCCCC"
+                android:textSize="7sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

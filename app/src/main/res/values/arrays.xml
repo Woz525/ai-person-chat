@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="language_options">
+        <item>中文</item>
+    </string-array>
+    <string-array name="mode_options">
+        <item>纯净</item>
+        <item>微黄</item>
+        <item>黄</item>
+        <item>血腥</item>
+        <item>亲情</item>
+    </string-array>
+</resources>

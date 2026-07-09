@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="API配置"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <RadioGroup
+        android:id="@+id/rgApiType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rbOfficial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="使用官方API [限每分钟次数]"
+            android:padding="8dp"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rbCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义"
+            android:padding="8dp" />
+    </RadioGroup>
+
+    <!-- 自定义区域 -->
+    <LinearLayout
+        android:id="@+id/llCustomKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp">
+
+        <!-- ===== 对话 ===== -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="【对话】"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 密钥 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密钥："
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical" />
+            <EditText
+                android:id="@+id/etApiKey"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="请输入对话API密钥"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <!-- 地址 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地址："
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical" />
+            <EditText
+                android:id="@+id/etApiUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="请输入对话API地址"
+                android:inputType="textUri" />
+        </LinearLayout>
+
+        <!-- 模型 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="模型："
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical" />
+            <EditText
+                android:id="@+id/etModel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="请输入对话模型名称"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <!-- ===== 生图 ===== -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="【生图】"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 密钥 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密钥："
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical" />
+            <EditText
+                android:id="@+id/etImageApiKey"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="请输入生图API密钥"
+                android:inputType="text"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+
+        <!-- 地址 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地址："
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical" />
+            <EditText
+                android:id="@+id/etImageApiUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="请输入生图API地址"
+                android:inputType="textUri" />
+        </LinearLayout>
+
+        <!-- 模型 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="模型："
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical" />
+            <EditText
+                android:id="@+id/etImageModel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="请输入生图模型名称"
+                android:inputType="text" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="如何获取api"
+            android:textSize="14sp"
+            android:layout_gravity="center_vertical" />
+
+        <ImageView
+            android:id="@+id/ivHelp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/help"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="帮助" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="?attr/actionBarSize"
+    android:paddingBottom="16dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:background="@color/primary_color">
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="角色状态"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 好感度 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="好感度："
+            android:textColor="#FFFFFF" />
+        <TextView
+            android:id="@+id/tvFavorabilityValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- 爱意值 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="爱意值："
+            android:textColor="#FFFFFF" />
+        <TextView
+            android:id="@+id/tvLoveValueValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- 锁死选项（略） -->
+    <LinearLayout
+        android:id="@+id/llLockOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:paddingTop="12dp"
+        android:background="#33000000"
+        android:visibility="gone">
+        <!-- 保持原有内容不变 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否锁死好感度与爱意值？"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+        <RadioGroup
+            android:id="@+id/rgLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbLockYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="是"
+                android:textColor="#FFFFFF" />
+            <RadioButton
+                android:id="@+id/rbLockNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="否"
+                android:textColor="#FFFFFF"
+                android:checked="true" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- 已知信息（固定显示“未开发完毕”） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="已知信息："
+            android:textColor="#FFFFFF" />
+        <TextView
+            android:id="@+id/tvKnownInfoValue"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="未开发完毕"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- 关键记忆（固定显示“未开发完毕”） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="关键记忆："
+            android:textColor="#FFFFFF" />
+        <TextView
+            android:id="@+id/tvKeyMemoriesValue"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="未开发完毕"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- ========== 新增：上下文限制 ========== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上下文限制(这将影响智能体的记忆力，且需不超出模型本身最大的上下文限制)"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:layout_marginBottom="4dp" />
+        <EditText
+            android:id="@+id/etContextLimit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="8"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:background="#EEEEEE"
+            android:padding="8dp" />
+    </LinearLayout>
+
+</LinearLayout>
